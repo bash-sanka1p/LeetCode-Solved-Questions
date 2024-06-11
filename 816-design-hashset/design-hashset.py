@@ -1,24 +1,24 @@
 class MyHashSet:
 
     def __init__(self):
-        self.hashset = {}
+        self.hashset = set()
         # print(self.hashset)
 
     def add(self, key: int) -> None:
-        if key not in self.hashset.keys():
-            self.hashset[key]=1
+        if key not in self.hashset:
+            self.hashset.add(key)
         # print(self.hashset)
 
 
     def remove(self, key: int) -> None:
-        if key in self.hashset.keys():
-            del self.hashset[key]
+        if key in self.hashset:
+            self.hashset.remove(key)
         # print(self.hashset)
 
 
 
     def contains(self, key: int) -> bool:
-        return True if  key in self.hashset.keys() else False
+        return True if  key in self.hashset else False
         # print(self.hashset)
 
 
